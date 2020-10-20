@@ -1,0 +1,65 @@
+<div class="page-header">
+  <h3 class="page-title">
+    Chartist
+  </h3>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="javascript:;">Charts</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Chartist</li>
+    </ol>
+  </nav>
+</div>
+<div class="row">
+  <div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Simple Line chart</h4>
+        <x-chartist [type]="'Line'" [data]="chartistLineData" [options]="chartistLineOptions" class="ct-chart ct-perfect-fourth" ></x-chartist>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Line scatterer</h4>
+        <x-chartist [type]="'Line'" [data]="chartistLineScatterData" [options]="chartistLineScatterOptions" class="ct-chart ct-perfect-fourth" ></x-chartist>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Stacked bar chart</h4>
+        <x-chartist [type]="'Bar'" [data]="chartistBarData" [options]="chartistBarOptions" class="ct-chart ct-perfect-fourth" ></x-chartist>        
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Horizontal bar chart</h4>
+        <x-chartist [type]="'Bar'" [data]="chartistBarHorizontalData" [options]="chartistBarHorizontalOptions" class="ct-chart ct-perfect-fourth" ></x-chartist>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Pie chart</h4>
+        <x-chartist [type]="'Pie'" [data]="chartistPieData" class="ct-chart ct-perfect-fourth" ></x-chartist>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Donut</h4>
+        <x-chartist [type]="'Pie'" [data]="chartistDonutData" [options]="chartistDonutOptions" class="ct-chart ct-perfect-fourth" ></x-chartist>
+      </div>
+    </div>
+  </div>
+</div>

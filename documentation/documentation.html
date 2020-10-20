@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Documentation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/theme/dracula.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid documentation">
+      <div class="row">
+        <div class="col-md-3 col-xl-2 left-sidebar">
+          <div class="logo-wrapper">
+              <img src="../template/demo_1/src/assets/images/logo-light.svg" alt="logo">
+          </div>
+          <h5 class="left-menu-title">Documentation</h5>
+          <ul class="left-menu">
+              <li><a href="#introduction"> Introduction </a></li>
+              <li><a href="#fileStructure"> File Structure </a></li>
+          </ul>
+          <h6 class="left-menu-title">Installation</h6>
+          <ul class="left-menu">
+              <li><a href="#setupEnvironment"> Setup Environment </a></li>
+              <li><a href="#templateInstallation"> Template Installation </a></li>
+          </ul>
+          <h6 class="left-menu-title">Deployment</h6>
+          <ul class="left-menu">
+              <li><a href="#deployment"> Deploy Angular App </a></li>
+          </ul>
+          <h6 class="left-menu-title">Basic Structure</h6>
+          <ul class="left-menu">
+              <li><a href="#appComponent"> App Component </a></li>
+              <li><a href="#navbar"> Navbar </a></li>
+              <li><a href="#settingsPanel"> Setting panel </a></li>
+              <li><a href="#leftSidebar"> Left sidebar </a></li>
+              <li><a href="#footer"> Footer </a></li>
+          </ul>
+          <h6 class="left-menu-title">Other Information</h6>
+          <ul class="left-menu">
+              <li><a href="#customerSupport"> Customer Support </a></li>
+          </ul>
+        </div>
+        <div class="col-md-9 col-xl-10 main-panel bg-white">
+          <div class="main-panel-wrapper">
+              <h2 class="mt-2 text-center font-weight-light text-muted text-uppercase mb-4">Documentation</h2>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3 id="introduction" class="mb-4">Introduction</h3>
+                  <p>Stellar Angular Admin is a responsive Angular 10 template that is based on the CSS framework Bootstrap 4 and it is built with Sass. Sass compiler makes it easier to code and customize. If you are unfamiliar with Bootstrap or Sass, visit their
+                      website and read through the documentation. All of Bootstrap components have been modified to fit the style of Stellar Angular Admin and provide a consistent look throughout the template.</p>
+                  <p>Before you start working with the template, we suggest you go through the pages that are bundled with the theme. Most of the template example pages contain quick tips on how to create or use a component which can
+                      be really helpful when you need to create something on the fly.</p>
+                  </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3 id="fileStructure" class="mb-4">File Structure</h3>
+                  <p>Once you have download the package you will see the following folder structure inside the folder.</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+Stellar/
+├── Angular
+    ├── template
+      ├── demo variation folders (for eg, demo_1)
+          ├── e2e/
+          ├── src/
+              ├── app/
+              ├── assets/
+              ├── environments/
+              ├── browserlist
+              ├── favicon.ico
+              ├── index.html
+              ├── karma.conf.js
+              ├── main.ts
+              ├── polyfills.ts
+              ├── styles.scss
+              ├── test.ts
+              ├── tsconfig.app.json
+              ├── tsconfig.spec.json
+          ├── .editorconfig/
+          ├── .gitignore
+          ├── angular.json
+          ├── CHANGELOG.md
+          ├── package.json
+          ├── README.md
+          ├── .tsconfig.md
+          ├── .tslint.json
+    ├── preview (dist of 4 demos)
+    ├── CHANGELOG.md
+    ├── documentation
+
+                  </textarea>
+                </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3>Installation</h3>
+                  <h4 id="setupEnvironment" class="pt-4">Set up the Development Environment</h4>
+                  <p>Install <a href="https://nodejs.org/en/" target="_blank">Node.js and npm</a> if they are not already on your machine.</p>
+                  <p>Angular CLI is a command line interface for the latest Angular. Install it before start with the Angular app.</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">npm install --global @angular/cli@latest</textarea>
+                  <div class="alert alert-warning">
+                      <p>If you have Angular CLI installed previously, update it to the latest Angular CLI. Remove the older version and re-install it.</p>
+                      <textarea rows="4" cols="50" class="code-non-editable">npm uninstall --global @angular/cli</textarea>
+                      <textarea rows="4" cols="50" class="code-non-editable">npm install --global @angular/cli@latest</textarea>   
+                  </div>
+                  <h4 id="templateInstallation" class="pt-4">Template Installation</h4>
+                  <p>Go to the project directory and install the Angular local project dependencies.</p>
+                  <p>Run <code>npm install</code>. This command install the dependencies in the local <code>node_modules</code> folder.
+                      By default, <code>npm install</code> will install all modules listed as dependencies in <code>package.json</code>.</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">npm install</textarea>   
+                  <textarea rows="4" cols="50" class="code-non-editable">ng serve</textarea>                   
+                  <p>The <code>ng serve</code> command launches the server, watches your files, and rebuilds the app as you make changes to those files.
+                      Using the <code>--open</code> (or just <code>-o</code>) option will automatically open your browser on <a href="http://localhost:4200/" target="_blank">http://localhost:4200/</a>.</p>
+                  <p>For more detailed information to install the Angular application, visit this official Angular <a href="https://angular.io/guide/quickstart" target="_blank">documentation website</a>.</p>
+                </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3 id="deployment">Deployment</h3>
+                  <h4 class="pt-4">Deploy Angular app </h4>
+                  <p>For the simplest deployment, create a production build and copy the output directory to a web server.</p>
+                  <p>1. Start with the production build:</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">ng build --prod</textarea>   
+                  <p>2. Copy everything within the output folder (dist/) to a folder on the server.</p>
+                  <p>3. Configure the server to redirect requests for missing files to index.html.</p>
+                  <p class="mt-4">If you copy the files into a server sub-folder, append the build flag, <code>--base-href</code> and set the <code>&lt;base href&gt;</code> appropriately.
+                      For example, if the <code>index.html</code> is on the server at <code>/my/app/index.html</code>, set the base href to <code>&lt;base href="/my/app/"&gt;</code> like this.</p>
+                      <p>If you're serving the app out of a subfolder, edit a version of index.html to set the base href appropriately.
+                      For example, if the URL to <code>index.html</code> is <code>www.mysite.com/my/app/index.html</code>, set the base href to:</p>
+                  <textarea rows="4" cols="50" class="code-non-editable"><base href="/my/app/"></textarea>                   
+                  <p>Learn more about the role of <code>&lt;base href&gt;</code> <a href="https://angular.io/guide/deployment#base-tag" target="_blank">below</a>.</p>
+                  <p>You also can set the base href right in the <code>ng build</code> command</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">ng build --prod --base-href="/my/app/"</textarea>                
+                  <p>For more detailed information, visit this official Angular <a href="https://angular.io/guide/deployment" target="_blank">documentation website</a>.</p>
+                </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3>Basic Structure</h3>
+                  <h4 class="pt-4" id="appComponent">App Component</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+
+    <div class="container-scroller">
+      <app-navbar *ngIf="showNavbar"></app-navbar>
+      <div class="container-fluid page-body-wrapper">
+          <app-settings-panel *ngIf="showSettings"></app-settings-panel>
+          <app-sidebar *ngIf="showSidebar"></app-sidebar>
+          <div class="main-panel" [ngClass]="{ 'main-panel-only' : !showSidebar }">
+          <div class="content-wrapper">
+              <router-outlet></router-outlet>
+          </div>
+          <app-footer *ngIf="showFooter"></app-footer>
+          </div>
+      </div>
+    </div>
+                  </textarea>
+                  <h4 class="pt-4" id="navbar">Navbar</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+
+    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html">
+          <img src="assets/images/logo.svg" alt="logo" class="logo-dark" />
+          <img src="assets/images/logo-light.svg" alt="logo-light" class="logo-light">
+        </a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" (click)="toggleSidebar()">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center">
+        <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Welcome stellar dashboard!</h5>
+        <ul class="navbar-nav navbar-nav-right">
+          <form class="search-form d-none d-md-block" action="#">
+            <i class="icon-magnifier"></i>
+            <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+          </form>
+          <li class="nav-item"><a href="#" class="nav-link"><i class="icon-basket-loaded"></i></a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><i class="icon-chart"></i></a></li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link count-indicator message-dropdown" id="messageDropdown" aria-expanded="false" ngbDropdownToggle>
+              <i class="icon-speech"></i>
+              <span class="count">7</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown" ngbDropdownMenu>
+              <a class="dropdown-item py-3">
+                <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
+                <span class="badge badge-pill badge-primary float-right">View all</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="assets/images/faces/face10.jpg" alt="image" class="img-sm profile-pic"> </div>
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">Marian Garner </p>
+                  <p class="font-weight-light small-text"> The meeting is cancelled </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="assets/images/faces/face12.jpg" alt="image" class="img-sm profile-pic"> </div>
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">David Grey </p>
+                  <p class="font-weight-light small-text"> The meeting is cancelled </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="assets/images/faces/face1.jpg" alt="image" class="img-sm profile-pic"> </div>
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">Travis Jenkins </p>
+                  <p class="font-weight-light small-text"> The meeting is cancelled </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown language-dropdown d-none d-sm-flex align-items-center" ngbDropdown>
+            <a class="nav-link d-flex align-items-center dropdown-toggle" id="LanguageDropdown" ngbDropdownToggle aria-expanded="false">
+              <div class="d-inline-flex">
+                <i class="flag-icon flag-icon-us"></i>
+              </div>
+              <span class="profile-text font-weight-normal">English</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" ngbDropdownMenu aria-labelledby="LanguageDropdown">
+              <a class="dropdown-item">
+                <i class="flag-icon flag-icon-us"></i> English </a>
+              <a class="dropdown-item">
+                <i class="flag-icon flag-icon-fr"></i> French </a>
+              <a class="dropdown-item">
+                <i class="flag-icon flag-icon-ae"></i> Arabic </a>
+              <a class="dropdown-item">
+                <i class="flag-icon flag-icon-ru"></i> Russian </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown" ngbDropdown>
+            <a class="nav-link dropdown-toggle" id="UserDropdown" ngbDropdownToggle aria-expanded="false">
+              <img class="img-xs rounded-circle ml-2" src="assets/images/faces/face8.jpg" alt="Profile image"> <span class="font-weight-normal"> Henry Klein </span></a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" ngbDropdownMenu aria-labelledby="UserDropdown">
+              <div class="dropdown-header text-center">
+                <img class="img-md rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
+                <p class="mb-1 mt-3">Henry Klein</p>
+                <p class="font-weight-light text-muted mb-0">kleinhenry@gmail.com</p>
+              </div>
+              <a class="dropdown-item"><i class="dropdown-item-icon icon-user text-primary"></i> My Profile <span class="badge badge-pill badge-danger">1</span></a>
+              <a class="dropdown-item"><i class="dropdown-item-icon icon-speech text-primary"></i> Messages</a>
+              <a class="dropdown-item"><i class="dropdown-item-icon icon-energy text-primary"></i> Activity</a>
+              <a class="dropdown-item"><i class="dropdown-item-icon icon-question text-primary"></i> FAQ</a>
+              <a class="dropdown-item"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" (click)="toggleOffcanvas()">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+                  </textarea>
+                  <h4 class="pt-4" id="settingsPanel">Settings Panel</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+
+    <div id="settings-trigger" (click)="toggleThemeSettings()"><i class="icon-settings"></i></div>
+    <div id="theme-settings" class="settings-panel">
+      <i class="settings-close icon-close" (click)="closeSettingsSidebar('theme')"></i>
+      <p class="settings-heading">SIDEBAR SKINS</p>
+      <div class="sidebar-bg-options selected" id="sidebar-default-theme"  (click)="changeSidebarTheme('dark')">
+        <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
+      </div>
+      <div class="sidebar-bg-options" id="sidebar-light-theme"  (click)="changeSidebarTheme('light')">
+        <div class="img-ss rounded-circle bg-light border mr-3"></div>Default
+      </div>
+      <p class="settings-heading mt-2">HEADER SKINS</p>
+      <div class="color-tiles mx-0 px-4">
+        <div class="tiles primary" (click)="changeNavbarTheme('primary')"></div>
+        <div class="tiles success" (click)="changeNavbarTheme('success')"></div>
+        <div class="tiles warning" (click)="changeNavbarTheme('warning')"></div>
+        <div class="tiles danger" (click)="changeNavbarTheme('danger')"></div>
+        <div class="tiles info" (click)="changeNavbarTheme('info')"></div>
+        <div class="tiles dark" (click)="changeNavbarTheme('dark')"></div>
+        <div class="tiles default light" (click)="changeNavbarTheme('default')"></div>
+      </div>
+      <p class="settings-heading mt-2">LAYOUT OPTIONS</p>
+      <div class="layout-variations px-4 mx-2 mt-3">
+        <div class="form-check layout-item">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="layout-variations" [checked]="isDefaultLayout" (change)="changeLayout('default')">
+            Default
+            <i class="input-helper"></i>
+          </label>
+        </div>
+        <div class="form-check layout-item">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="layout-variations" [checked]="isBoxedLayout" (change)="changeLayout('boxed')">
+            Boxed Layout
+            <i class="input-helper"></i>
+          </label>
+        </div>
+        <div class="form-check layout-item">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="layout-variations" [checked]="isSidebarIconOnly" (change)="changeLayout('icon-menu')">
+            Icon Menu
+            <i class="input-helper"></i>
+          </label>
+        </div>
+        <div class="form-check layout-item">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="layout-variations" [checked]="isCompactMenu" (change)="changeLayout('compact-menu')">
+            Compact Menu
+            <i class="input-helper"></i>
+          </label>
+        </div>
+        <div class="form-check layout-item">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="layout-variations" [checked]="isFixedSidebar" (change)="changeLayout('fixed-sidebar')">
+            Fixed Sidebar
+            <i class="input-helper"></i>
+          </label>
+        </div>
+        <div class="form-check layout-item">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="layout-variations" [checked]="isHiddenSidebar" (change)="changeLayout('hidden-sidebar')">
+            Hidden Sidebar
+            <i class="input-helper"></i>
+          </label>
+        </div>
+        <div class="form-check layout-item">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="layout-variations" [checked]="isOverlaySidebar" (change)="changeLayout('overlay-sidebar')">
+            Overlay Sidebar
+            <i class="input-helper"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+                    
+                  </textarea>
+                  <h4 class="pt-4" id="leftSidebar">Left Sidebar</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <ul class="nav">
+        <li class="nav-item navbar-brand-mini-wrapper">
+          <a class="nav-link navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        </li>
+        <li class="nav-item nav-profile">
+          <a href="#" class="nav-link">
+            <div class="profile-image">
+              <img class="img-xs rounded-circle" src="assets/images/faces/face8.jpg" alt="profile image">
+              <div class="dot-indicator bg-success"></div>
+            </div>
+            <div class="text-wrapper">
+              <p class="profile-name">Henry Klein</p>
+              <p class="designation" translate>Administrator</p>
+            </div>
+            <div class="icon-container">
+              <i class="icon-bubbles"></i>
+              <div class="dot-indicator bg-danger"></div>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item nav-category">
+          <span class="nav-link" translate>Dashboard</span>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active': dashboard.isActive }">
+          <a class="nav-link" routerLink="/dashboard" routerLinkActive #dashboard="routerLinkActive" [routerLinkActiveOptions]="{exact:
+            true}">
+            <span class="menu-title" translate>Dashboard</span>
+            <i class="icon-screen-desktop menu-icon"></i>
+          </a>
+        </li>
+        <li class="nav-item nav-category"><span class="nav-link" translate>UI Elements</span></li>
+        <li class="nav-item" [ngClass]="{'active' : buttons.isActive || dropdowns.isActive || typography.isActive }">
+          <a class="nav-link" (click)="uiBasicCollapsed = !uiBasicCollapsed" [attr.aria-expanded]="uiBasicCollapsed" aria-controls="ui-basic">
+            <span class="menu-title" translate>Basic UI Elements</span>
+            <i class="icon-layers menu-icon"></i>
+          </a>
+          <div class="collapse" id="ui-basic" [ngbCollapse]="!uiBasicCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive" translate>Buttons</a></li>
+              <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/dropdowns" routerLinkActive="active" #dropdowns="routerLinkActive" translate>Dropdowns</a></li>
+              <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/typography" routerLinkActive="active" #typography="routerLinkActive" translate>Typography</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active' : basicElements.isActive }">
+          <a class="nav-link" (click)="formsCollapsed = !formsCollapsed" [attr.aria-expanded]="formsCollapsed" aria-controls="form-elements">
+            <span class="menu-title" translate>Form elements</span>
+            <i class="icon-book-open menu-icon"></i>
+          </a>
+          <div class="collapse" id="form-elements" [ngbCollapse]="!formsCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"><a class="nav-link" routerLink="forms/basic-elements" routerLinkActive="active" #basicElements="routerLinkActive" translate>Basic Elements</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active' : chartjs.isActive }">
+          <a class="nav-link" (click)="chartsCollapsed = !chartsCollapsed" [attr.aria-expanded]="chartsCollapsed" aria-controls="charts">
+            <span class="menu-title" translate>Charts</span>
+            <i class="icon-chart menu-icon"></i>
+          </a>
+          <div class="collapse" id="charts" [ngbCollapse]="!chartsCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" routerLink="charts/chartjs" routerLinkActive="active" #chartjs="routerLinkActive">ChartJs</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active' : basicTable.isActive }">
+          <a class="nav-link" (click)="tablesCollapsed = !tablesCollapsed" [attr.aria-expanded]="tablesCollapsed" aria-controls="tables">
+            <span class="menu-title" translate>Tables</span>
+            <i class="icon-grid menu-icon"></i>
+          </a>
+          <div class="collapse" id="tables" [ngbCollapse]="!tablesCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" routerLink="tables/basic-table" routerLinkActive="active" #basicTable="routerLinkActive" translate>Basic table</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" [ngClass]=" { 'active' : mdi.isActive}">
+          <a class="nav-link" (click)="iconsCollapsed = !iconsCollapsed"  [attr.aria-expanded]="iconsCollapsed" aria-controls="icons">
+            <span class="menu-title" translate>Icons</span>
+            <i class="icon-globe menu-icon"></i>
+          </a>
+          <div class="collapse" id="icons" [ngbCollapse]="!iconsCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" routerLink="icons/mdi" routerLinkActive="active" #mdi="routerLinkActive">Material</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item nav-category"><span class="nav-link" translate>Extra Pages</span></li>
+        <li class="nav-item" [ngClass]="{ 'active' : login.isActive || register.isActive }">
+          <a class="nav-link" (click)="userPagesCollapsed = !userPagesCollapsed"  [attr.aria-expanded]="userPagesCollapsed" aria-controls="auth">
+            <span class="menu-title" translate>User Pages</span>
+            <i class="icon-disc menu-icon"></i>
+          </a>
+          <div class="collapse" id="auth" [ngbCollapse]="!userPagesCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" routerLink="user-pages/login" routerLinkActive="active" #login="routerLinkActive" translate> Login </a></li>
+              <li class="nav-item"> <a class="nav-link" routerLink="user-pages/register" routerLinkActive="active" #register="routerLinkActive" translate> Register </a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active' : error404.isActive || error500.isActive }">
+          <a class="nav-link" (click)="errorCollapsed = !errorCollapsed"  [attr.aria-expanded]="errorCollapsed" aria-controls="error">
+            <span class="menu-title" translate>Error pages</span>
+            <i class="icon-flag menu-icon"></i>
+          </a>
+          <div class="collapse" id="error" [ngbCollapse]="!errorCollapsed">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" routerLink="error-pages/404" routerLinkActive="active" #error404="routerLinkActive"> 404 </a></li>
+              <li class="nav-item"> <a class="nav-link" routerLink="error-pages/500" routerLinkActive="active" #error500="routerLinkActive"> 500 </a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item nav-category"><span class="nav-link" translate>Help</span></li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://bootstrapdash.com/demo/stellar-angular-free/documentation/documentation.html" target="_blank">
+            <span class="menu-title" translate>Documentation</span>
+            <i class="icon-folder-alt menu-icon"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+                    
+                        
+                  </textarea>
+                  <h4 class="pt-4" id="footer">Footer</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+    <footer class="footer">
+      <div class="d-sm-flex justify-content-center justify-content-sm-between">
+        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019 Stellar. All rights reserved. <a href="#">Terms of use</a><a href="#">Privacy Policy</a></span>
+        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="icon-heart text-danger"></i></span>
+      </div>
+    </footer>
+                  </textarea>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 id="customerSupport" class="mb-4">Customer Support</h3>
+                  <p>We will assist you any problem you encounter while buidling your dashboard via Stellar Angular Admin.</p>
+                  <p>Email: <a href="mailto:support@urbanui.com">support@urbanui.com</a> </p>
+                  <p>We will respond to you as quickly as we can. Thank you.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/mode/python/python.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

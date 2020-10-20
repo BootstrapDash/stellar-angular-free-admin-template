@@ -1,0 +1,123 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item navbar-brand-mini-wrapper">
+      <a class="nav-link navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+    </li>
+    <li class="nav-item nav-profile">
+      <a href="#" class="nav-link">
+        <div class="profile-image">
+          <img class="img-xs rounded-circle" src="assets/images/faces/face8.jpg" alt="profile image">
+          <div class="dot-indicator bg-success"></div>
+        </div>
+        <div class="text-wrapper">
+          <p class="profile-name">Henry Klein</p>
+          <p class="designation" translate>Administrator</p>
+        </div>
+        <div class="icon-container">
+          <i class="icon-bubbles"></i>
+          <div class="dot-indicator bg-danger"></div>
+        </div>
+      </a>
+    </li>
+    <li class="nav-item nav-category">
+      <span class="nav-link" translate>Dashboard</span>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active': dashboard.isActive }">
+      <a class="nav-link" routerLink="/dashboard" routerLinkActive #dashboard="routerLinkActive" [routerLinkActiveOptions]="{exact:
+        true}">
+        <span class="menu-title" translate>Dashboard</span>
+        <i class="icon-screen-desktop menu-icon"></i>
+      </a>
+    </li>
+    <li class="nav-item nav-category"><span class="nav-link" translate>UI Elements</span></li>
+    <li class="nav-item" [ngClass]="{'active' : buttons.isActive || dropdowns.isActive || typography.isActive }">
+      <a class="nav-link" (click)="uiBasicCollapsed = !uiBasicCollapsed" [attr.aria-expanded]="uiBasicCollapsed" aria-controls="ui-basic">
+        <span class="menu-title" translate>Basic UI Elements</span>
+        <i class="icon-layers menu-icon"></i>
+      </a>
+      <div class="collapse" id="ui-basic" [ngbCollapse]="!uiBasicCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive" translate>Buttons</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/dropdowns" routerLinkActive="active" #dropdowns="routerLinkActive" translate>Dropdowns</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/typography" routerLinkActive="active" #typography="routerLinkActive" translate>Typography</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active' : basicElements.isActive }">
+      <a class="nav-link" (click)="formsCollapsed = !formsCollapsed" [attr.aria-expanded]="formsCollapsed" aria-controls="form-elements">
+        <span class="menu-title" translate>Form elements</span>
+        <i class="icon-book-open menu-icon"></i>
+      </a>
+      <div class="collapse" id="form-elements" [ngbCollapse]="!formsCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"><a class="nav-link" routerLink="forms/basic-elements" routerLinkActive="active" #basicElements="routerLinkActive" translate>Basic Elements</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active' : chartjs.isActive }">
+      <a class="nav-link" (click)="chartsCollapsed = !chartsCollapsed" [attr.aria-expanded]="chartsCollapsed" aria-controls="charts">
+        <span class="menu-title" translate>Charts</span>
+        <i class="icon-chart menu-icon"></i>
+      </a>
+      <div class="collapse" id="charts" [ngbCollapse]="!chartsCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="charts/chartjs" routerLinkActive="active" #chartjs="routerLinkActive">ChartJs</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active' : basicTable.isActive }">
+      <a class="nav-link" (click)="tablesCollapsed = !tablesCollapsed" [attr.aria-expanded]="tablesCollapsed" aria-controls="tables">
+        <span class="menu-title" translate>Tables</span>
+        <i class="icon-grid menu-icon"></i>
+      </a>
+      <div class="collapse" id="tables" [ngbCollapse]="!tablesCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="tables/basic-table" routerLinkActive="active" #basicTable="routerLinkActive" translate>Basic table</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item" [ngClass]=" { 'active' : mdi.isActive}">
+      <a class="nav-link" (click)="iconsCollapsed = !iconsCollapsed"  [attr.aria-expanded]="iconsCollapsed" aria-controls="icons">
+        <span class="menu-title" translate>Icons</span>
+        <i class="icon-globe menu-icon"></i>
+      </a>
+      <div class="collapse" id="icons" [ngbCollapse]="!iconsCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="icons/mdi" routerLinkActive="active" #mdi="routerLinkActive">Material</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item nav-category"><span class="nav-link" translate>Extra Pages</span></li>
+    <li class="nav-item" [ngClass]="{ 'active' : login.isActive || register.isActive }">
+      <a class="nav-link" (click)="userPagesCollapsed = !userPagesCollapsed"  [attr.aria-expanded]="userPagesCollapsed" aria-controls="auth">
+        <span class="menu-title" translate>User Pages</span>
+        <i class="icon-disc menu-icon"></i>
+      </a>
+      <div class="collapse" id="auth" [ngbCollapse]="!userPagesCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="user-pages/login" routerLinkActive="active" #login="routerLinkActive" translate> Login </a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="user-pages/register" routerLinkActive="active" #register="routerLinkActive" translate> Register </a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active' : error404.isActive || error500.isActive }">
+      <a class="nav-link" (click)="errorCollapsed = !errorCollapsed"  [attr.aria-expanded]="errorCollapsed" aria-controls="error">
+        <span class="menu-title" translate>Error pages</span>
+        <i class="icon-flag menu-icon"></i>
+      </a>
+      <div class="collapse" id="error" [ngbCollapse]="!errorCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="error-pages/404" routerLinkActive="active" #error404="routerLinkActive"> 404 </a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="error-pages/500" routerLinkActive="active" #error500="routerLinkActive"> 500 </a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item nav-category"><span class="nav-link" translate>Help</span></li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://bootstrapdash.com/demo/stellar-angular-free/documentation/documentation.html" target="_blank">
+        <span class="menu-title" translate>Documentation</span>
+        <i class="icon-folder-alt menu-icon"></i>
+      </a>
+    </li>
+  </ul>
+</nav>

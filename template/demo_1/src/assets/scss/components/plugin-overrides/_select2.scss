@@ -1,0 +1,46 @@
+/* Select2 */
+.select2-example {
+  .select2-container {
+      .select2-selection--single {
+          @extend .form-control;
+          padding: 0.4rem 1.375rem;
+          padding-left: 3px;
+          .select2-selection__rendered,
+              .select2-selection__arrow {
+              line-height: 1.125rem;
+              height: 100%;
+          }
+      }
+      .select2-selection--multiple {
+        @extend .form-control;
+        padding: 0 3px;
+        .select2-selection__choice {
+          color: color(white);
+          border: 0;
+          border-radius: 3px;
+          padding: 3px 10px;
+          font-size: .875rem;
+          font-family: inherit;
+          line-height: 1;
+          .select2-selection__choice__remove {
+            color: color(white);
+          }
+          &:nth-child(5n+1) {
+            background: theme-color(primary);
+          }
+          &:nth-child(5n+2) {
+            background: theme-color(success);
+          }
+          &:nth-child(5n+3) {
+            background: theme-color(info);
+          }
+          &:nth-child(5n+4) {
+            background: theme-color(danger);
+          }
+          &:nth-child(5n+5) {
+            background: theme-color(warning);
+          }
+        }
+      }
+  }
+}

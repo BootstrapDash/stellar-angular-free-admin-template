@@ -1,0 +1,68 @@
+<div id="settings-trigger" (click)="toggleThemeSettings()"><i class="icon-settings"></i></div>
+<div id="theme-settings" class="settings-panel">
+  <i class="settings-close icon-close" (click)="closeSettingsSidebar('theme')"></i>
+  <p class="settings-heading" translate>SIDEBAR SKINS</p>
+  <div class="sidebar-bg-options selected" id="sidebar-default-theme"  (click)="changeSidebarTheme('dark')">
+    <div class="img-ss rounded-circle bg-dark border mr-3"></div><span translate >Dark</span>
+  </div>
+  <div class="sidebar-bg-options" id="sidebar-light-theme"  (click)="changeSidebarTheme('light')">
+    <div class="img-ss rounded-circle bg-light border mr-3"></div><span translate>Default</span>
+  </div>
+  <p class="settings-heading mt-2" translate>HEADER SKINS</p>
+  <div class="color-tiles mx-0 px-4">
+    <div class="tiles dark" (click)="changeNavbarTheme('dark')"></div>
+    <div class="tiles default light" (click)="changeNavbarTheme('default')"></div>
+  </div>
+  <p class="settings-heading mt-2" translate>LAYOUT OPTIONS</p>
+  <div class="layout-variations px-4 mx-2 mt-3">
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isDefaultLayout" (change)="changeLayout('default')">
+        <span translate>Default</span>
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isBoxedLayout" (change)="changeLayout('boxed')">
+        <span translate>Boxed Layout</span>
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isSidebarIconOnly" (change)="changeLayout('icon-menu')">
+        <span translate>Icon Menu</span>
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isCompactMenu" (change)="changeLayout('compact-menu')">
+        <span translate>Compact Menu</span>
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isFixedSidebar" (change)="changeLayout('fixed-sidebar')">
+        <span translate>Fixed Sidebar</span>
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isHiddenSidebar" (change)="changeLayout('hidden-sidebar')">
+        <span translate>Hidden Sidebar</span>
+        <i class="input-helper"></i>
+      </label>
+    </div>
+    <div class="form-check layout-item">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="layout-variations" [checked]="isOverlaySidebar" (change)="changeLayout('overlay-sidebar')">
+        <span translate>Overlay Sidebar</span>
+        <i class="input-helper"></i>
+      </label>
+    </div>
+  </div>
+</div>
