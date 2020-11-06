@@ -8,7 +8,10 @@ import { NgbDate, NgbCalendar, NgbInputDatepicker } from '@ng-bootstrap/ng-boots
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-
+  toggleProBanner(event) {
+    event.preventDefault();
+    document.querySelector('body').classList.toggle('removeProbanner');
+  }
   @ViewChild('d', {static: false}) datepicker: NgbInputDatepicker;
 
 // Performance indicator chart
